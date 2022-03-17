@@ -7,4 +7,4 @@ This code allows to extract and save histogram plots (to histograms folder) of a
 ![Example Images](https://github.com/Akerdogmus/histogram_creator_from_images/blob/main/images/saltpepper.bmp)
 
 #### Example Histogram
-![Example Histogram](https://github.com/Akerdogmus/histogram_creator_from_images/blob/main/histograms/saltpepper_hist.jpg)
+![Example Histogram](https://github.com/Akerdogmus/histogram_creator_from_images/blob/main/histograms/new_saltpepper_hist.jpg)
