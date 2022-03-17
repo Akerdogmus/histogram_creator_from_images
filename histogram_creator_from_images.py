@@ -15,25 +15,26 @@ def histogram_creating_from_images():
     for img in image_list:
         print("Process has been started...")
         print("Image name: ", img)
-        get_histogram(image_name=img, format="png")
+        get_histogram(image_name=img, img_format="png")
         print("Printed!")
 
     print("Histogram process finished!")
 
 
-def get_histogram(image_name, format):
+def get_histogram(image_name, img_format):
     """
     The name and format is the function that gives the histogram of the received picture.
     """
 
-    img_name = "images/" + image_name + "." + format
+    img_name = "images/" + image_name + "." + img_format
     gray_img = cv2.imread(img_name, cv2.IMREAD_GRAYSCALE)
     # cv2.imshow('Image',gray_img)
     cv2.calcHist([gray_img], [0], None, [256], [0, 256])
 
-    plt.hist(gray_img.ravel(), 256, [0, 256])
+    plt.hist(gray_img.ravel(), 253, [1, 253])
     plt.title("Histogram for gray scale picture")
     plt.savefig("histograms/" + image_name + "_hist.jpg")
+    plt.close()
     # plt.show()
 
 
@@ -68,15 +69,31 @@ def read_image_list(file_path):
     return image_list
 
 
-"""
-def image_show():
+def single_image_file_histogram(image_name, img_format):
+    """
+    The name and format is the function that gives the histogram of
+    the single picture of user entered.
+    """
 
-    gray_img = cv2.imread('images/sp_5.png', cv2.IMREAD_GRAYSCALE)
-    cv2.imshow('Image',gray_img)
+    img_name = "images/" + image_name + "." + img_format
+    print(img_name)
+    gray_img = cv2.imread(img_name, cv2.IMREAD_GRAYSCALE)
+    cv2.imshow("Image", gray_img)
+
+    cv2.calcHist([gray_img], [0], None, [256], [0, 256])
+
+    # 256 olduğunda son değer çok yüksek çıktığından grafik net incelenemiyor.
+    plt.hist(gray_img.ravel(), 253, [0, 253])
+    plt.title("Histogram for gray scale picture")
+    plt.savefig("histograms/" + image_name + "_hist.jpg")
+    plt.show()
 
     while True:
-        k = cv2.waitKey(0) & 0xFF     
-        if k == 27: break             # ESC key to exit
+        k = cv2.waitKey(0) & 0xFF
+        if k == 27:
+            break  # ESC key to exit
     cv2.destroyAllWindows()
-"""
+
+
+# single_image_file_histogram(image_name="ornek", img_format="bmp")
 histogram_creating_from_images()
