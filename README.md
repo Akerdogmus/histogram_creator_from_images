@@ -1,5 +1,6 @@
 # Histogram Creator from Images
 [![CodeFactor](https://www.codefactor.io/repository/github/akerdogmus/ake_python_toolkit/badge)](https://www.codefactor.io/repository/github/akerdogmus/ake_python_toolkit)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 This code allows to extract and save histogram plots (to histograms folder) of all images in a (gray) image library (from images folder).
 
