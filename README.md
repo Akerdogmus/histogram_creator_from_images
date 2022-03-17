@@ -1,4 +1,4 @@
-# Histogram Creator from Images
+# Histogram Creator from (Grey) Images
 [![CodeFactor](https://www.codefactor.io/repository/github/akerdogmus/histogram_creator_from_images/badge)](https://www.codefactor.io/repository/github/akerdogmus/histogram_creator_from_images)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
